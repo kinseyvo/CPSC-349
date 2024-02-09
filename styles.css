@@ -1,0 +1,16 @@
+label {
+    color: red; 
+}
+#fname {
+    background-color: black;
+}
+.passwd {
+    color: blue;
+    font-size: 25px;
+}
+#lblFname {
+    color: greenyellow;
+}
+.fnameClass {
+    background-color: chocolate;
+}
