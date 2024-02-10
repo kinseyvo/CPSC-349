@@ -4,13 +4,19 @@
         <title>
             Hello Document
         </title>
+        <style>
+            table, th, td {
+                border: 1px solid black;
+                border-collapse: collapse;
+            }
+        </style>
     </head>
 
     <body>
         <center>
             <h1 style="border: 2px solid Tomato;">Hello World</h1>
-            <h1>
-                Hello world
+            <h1 style="background-color: blue; color: red; font-style: italic; text-align: center; font-size: 50px; padding-top: 50px;">
+                Hello world.
             </h1>
         </center>
         <h1 style="border: 2px solid dodgerblue;">Hello World</h1>
@@ -29,7 +35,7 @@
         </p>
 
         <pre>
-            <p style="background-color: burlywood; border: 3px dashed green; display: inline; font-size: 30px;">
+            <p style="background-color: burlywood; border: 3px dashed green; display: inline; font-size: 30;">
                 this is the pre tag
                 this is inside the p tag
             </p>
@@ -38,6 +44,7 @@
         <p style="font-family:'Lucida Console', monospace">This text is monospace text.</p>
 
         <p style="color:blue">The <abbr title="World Health Organization">WHO</abbr> was founded in 1948.</p>
+        <p style="color: rgb(225, 0, 255)">The <abbr title="World Health Organization">WHO</abbr> was founded in 1948.</p>
 
         <a href="http://www.fullerton.edu/" style="color:black;text-decoration: none; cursor: pointer;">Visit CSUF</a>
 
@@ -45,6 +52,65 @@
 
         <a href="mailto:someone@example.com">Send email</a>
 
+        <!-- Unordered List -->
+        <ul>
+            <li>four</li>
+            <li>two</li>
+            <li>three</li>
+            <li>one</li>
+            <li>five</li>
+            <li>six</li>
+        </ul>
+
+        <!-- Ordered List -->
+        <ol>
+            <li>food</li>
+            <li>clothes</li>
+            <li>bucket</li>
+            <li>costco</li>
+            <li>five</li>
+            <li>six</li>
+        </ol>
+
+
+        <!-- <table style="border: 1px solid black;border-color: black"> -->
+        <table style="width: 50%;">
+            <tr>
+                <th>Name</th>
+                <th>City</th>
+                <th>Phone</th>
+            </tr>
+            <tr>
+                <td>John</td>
+                <td>Fullerton</td>
+                <td>1234567890</td>
+            </tr>
+            <tr>
+                <td>Will</td>
+                <td>LA</td>
+                <td>1236547890</td>
+            </tr>
+            <tr>
+                <td>Sara</td>
+                <td>SFO</td>
+                <td>9876543210</td>
+            </tr>
+        </table>
+
+
+        <div>
+            <div>
+                <p>this is para 1 inside div 1</p>
+            </div>
+    
+            <div style="float: right;">
+                <p>this is para 2 inside div 2</p>
+            </div>
+    
+            <div>
+                <p>this is para 3 inside div 3</p>
+            </div>
+        </div>
 
     </body>
 
