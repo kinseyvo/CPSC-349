@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variable</title>
+</head>
+<body>
+    <h1>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed, ab!</h1>
+    <script>
+        var a = 10;
+        var b = "hello";
+        console.log(b);
+        const d = 33;
+
+        function f() {
+            let c = 25;
+            const e = 99;
+            //d = 89;     // this is not valid
+            console.log(c);
+            console.log(a);
+            console.log(d);
+        }
+        const obj = { key:"value" }
+        obj.key = "bhavyom";    // this is valid
+        
+        console.log(obj);
+
+        //console.log(e);
+        f();
+        //console.log(c);   //wont work bc c was defined inside f()
+    </script>
+</body>
+</html>
