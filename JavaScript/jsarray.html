@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array and Objects</title>
+</head>
+<body>
+    <h1>Array and Objects</h1>
+    <script>
+        let arr = [2, "Tom", "Jerry", 12]
+        console.log(arr)
+
+        let arr1 = arr;
+        arr1.push("Mickey")
+        arr1 = arr1.sort()
+        console.log(arr1)
+        console.log(arr)
+
+        let newArr = new Array(23, 45);
+        console.log(newArr)
+
+        let newArr11 = new Array(10);
+        console.log(newArr11)
+
+        let employee = {
+            name: "Tom",
+            salary: 100,
+            designation: "Software Developer",
+            "current dept": "Marketing"
+        }
+
+        console.log(employee)
+        console.log(employee["name"])
+        console.log(employee.name)
+        console.log(employee.salary)
+        console.log(employee['designation']);
+        console.log(employee.designation)
+        console.log(employee["current dept"]);
+
+        let newArr1 = [3, 45, "Tom", true, employee]
+        console.log(newArr1);
+
+        let name = ['Tom', 'Jerry', 'Mickey', 1, 2, true, employee]
+        console.log(name)
+        name = name.sort()
+
+        name.push("Mini");
+        console.log(name)
+
+        let poppedElement = name.pop()
+        console.log(poppedElement)
+        console.log(name)
+        
+    </script>
+</body>
+</html>
