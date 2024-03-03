@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operators and Operands</title>
+</head>
+<body>
+    <h1>This is for operators</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque saepe totam dicta dolore id cumque!</p>
+    <script>
+        let a = 6;
+        // var a = 3;
+        let b = 3;
+        // var b = 2;
+
+        console.log("a = " + a + ", b = " + b);
+        console.log("the value of a + b is " + (a+b));  //6
+        console.log("the value of a - b is " + (a-b));  //3
+        console.log("the value of a * b is " + (a*b));  //18
+        console.log("the value of a / b is " + (a/b));  //2
+
+        console.log("the value of a ** b is " + (a**b)); //216
+
+        console.log("the value of a++ is " + (a++));
+        console.log("the value of ++a is " + (++a));  //8
+
+        console.log("the value of a-- is " + (a--));    //8
+        console.log("the value of --a is " + (--a));    //6
+
+        let c = "3";
+        // var c = "3";
+        console.log("c = "+ c + " which is a " + typeof c);
+        console.log("b==c is " + (b==c));
+        console.log("b===c is " + (b===c));
+
+
+        console.log("b==c: " +(b==c) && (a>b));     //true
+        console.log("b==c: " +(b==c) || (a>b));     //true
+        console.log("b===c :"+(b===c));   //false
+
+        console.log("!b==c :"+!(b==c));     //false
+
+        console.log(typeof a);  //number
+        console.log(typeof c);  //string
+
+        console.log(a>b);       //true
+
+        console.log(a>b?a:b);   // 6
+
+        // bitwise operator
+        let d = 2;     // 010
+        let e = 3;     // 011
+        console.log(d&e);   //010   2
+    </script>
+</body>
+</html>
