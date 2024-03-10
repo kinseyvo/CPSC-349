@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Navigation</title>
+</head>
+<body>
+    <div class="container">
+        <h1 id="demo">DOM Navigation</h1>
+    </div>
+    <div class="container">
+        <p name="textp">Lorem ipsum dolor sit amet, consectetur adipisicingwen elit. Rem architecto odit magni minima at. Accusamus officia reprehenderit nam vitae nihil a tempore explicabo ad culpa tenetur pariatur, nisi autem consectetur. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem architecto odit magni minima at.</p>
+        <p class="box">Lorem ipsum dolor sit amet consectetur adipisicingwen elit. Minus perferendis earum labore sunt quis iusto ipsam corrupti sed in natus veritatis dolore, unde animi dolor cum quisquam officia, maiores tempore.</p>
+    </div>
+    <button id="btnClick" onclick="clickme()">Click Me!</button>
+
+
+    <script>
+        //document.getElementById("demo").innerHTML = "Hello World!";
+        let demo = document.getElementById("demo");
+        demo.innerHTML = "Hello World!";
+
+        let container = document.getElementsByClassName("container");
+        console.log(container[0]);
+        container[0].setAttribute("style", "background: red");
+        //container[0].style.setProperty("background", "yellow");
+        container[0].style.background = "green";
+
+        let textp = document.getElementsByName("textp")
+        textp[0].setAttribute("style", "font-size:32px");
+
+        // let ptag = document.getElementsByTagName("p")
+        // ptag[1].setAttribute("style", "position: relative; left: 100px");
+
+        // query selector
+        // let ptag = document.querySelector("p")
+        // ptag.setAttribute("style", "position: relative; left: 100px; font-size:32px");
+
+        // query selector all
+        let ptag = document.querySelectorAll("p.box")
+        ptag[0].setAttribute("style", "position: relative; left: 100px;");
+
+
+        let newDiv = document.createElement("div");
+        newDiv.className = "box"
+        
+        let heading = document.createElement("h2");
+        heading.innerHTML = "This is newly added h2"
+
+        newDiv.appendChild(heading);
+
+        document.body.appendChild(newDiv)
+
+        newDiv.style.background = "red"
+        newDiv.style.height = "200px"
+        newDiv.style.width = "200px"
+        heading.style.color = "white"
+
+        
+        let btnclick = document.getElementById("btnClick")
+        let count = 0;
+        // btnclick.onclick = () => {
+        //     ++count;
+        //     console.log(count)
+        // }
+
+        function clickme() {
+            ++count;
+            console.log(count)
+        }
+
+    </script>
+</body>
+</html>
