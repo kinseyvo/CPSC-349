@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event</title>
+    <style>
+        button {
+            background-color: red;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <!-- use 'div.container' shortcut -->
+    <div class="container">
+        <h1>This is an event</h1>
+        <p>Lorem ipsum dolor sit amgwent consectetur adipisicingwen elit. Harum itaque velit quibusdam eius quod aut modi quia, amet commodi perferendis iusto assumenda voluptatem, quasi mollitia! Vero debitis enim autem quibusdam laboriosam veniam impedit hic cumque molestias corrupti aspernatur fugit provident quos, placeat recusandae tempora consequuntur vel delectus numquam corporis inventore dignissimos amet? Itaque, rem expedita nisi deserunt ducimus debitis vgweniam dolores iusto assumenda commodi id dignissimos, voluptas saepe necessitatibus in fugit molestiae ipsum atque reiciendis quis quibusdam aut dolorum, delectus vel? Incidunt voluptate eius sit vitae ipsum assumenda quis quidem dolores illo fugit sed quae illum deserunt reprehenderit distinctio, enim magni commodi corrupti dolor. Magni sunt, temporibus nemo ipsum id dignissimos? Exercitationem accusamus voluptatem cum corporis, molestiae maiores reiciendis minima fuga fugiat, officiis sed molestias beatae nostrum commodi pariatur necessitatibus, magweni voluptatibus quia cupiditate quisquam sunt? Atque aut iure dolore illo quaerat doloremque temporibus placeat molestias, modi repellendus laborum asperiores est totam itaque aliquid a, soluta, sequi eum! Facilis, tempore iusto aut fugwenit reprehenderit maiores commodi perspiciatis error nisi aspernatur. Voluptatum labore delectus eum ad atque quas ratione, fugwenit tenetur obcaecati eius sapiente perferendis excepturi mollitia, rerum accusamus, aperiam sed nihil iusto! Distinctio, nobis pariatur tenetur vitae placeat ratione inventore!</p>
+        <button onclick="btnClick()">Click Here</button>
+        <p>:D</p>
+    </div>
+    <script>
+        let para = document.getElementsByTagName("p")
+        para[0].addEventListener("mouseover", () => {
+            console.log("mouse inside the para");
+        })
+        para[0].addEventListener("mouseout", () => {
+            console.log("mouse outside the para");
+        })
+
+        function btnClick() {
+            let para = document.getElementsByTagName("p")
+            if (para[0].style.display == "none") {
+                para[0].style.display = "block"
+            }
+            else {
+                para[0].style.display = "none"
+            }
+        }
+
+        /*
+        console.log() vs console.dir()
+        - works slightly differently in some browsers
+        - log(): toString representation of the object
+        - dir(): recognizes the object and prints its properties only
+        */
+        
+    </script>
+</body>
+</html>
