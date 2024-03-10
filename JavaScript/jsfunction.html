@@ -8,9 +8,14 @@
 <body>
     <h1>Functions</h1>
     <script>
-        function multiply(a, b) {
+        function multiply(a, b=9) {
             return a * b;
             //console.log(a*b);
+        }
+
+        function multiply2(a, b=9) {
+            let c = a * b;
+            return c;
         }
 
         let a = 5;
@@ -20,13 +25,53 @@
 
         console.log(result);
 
+        let result_1 = multiply2(a, b);
+
+        console.log(result_1);
+
 
         result = multiply(a);
         console.log(result);
 
-        //let c = [3, 5, 2]
-        
 
+        let multiply3 = (a, b=9) => {
+            return a * b;
+        }
+
+        // one-line version
+        let multiply4 = (a, b=9) => a * b;
+        console.log("this version:", multiply4(a, b));
+
+        let doSomething = () => console.log("did something!");
+        doSomething();
+
+
+        let arr = [3, 5, 7, 2, 1]
+
+        //map
+        // map()  used to apply a function to each element of an array and returns a new array with the results of calling the provided function on every element in the original array
+        // doesn't change  original array but returns a new array with the transformed elements
+        let arr1 = arr.map((element) => multiply4(element))
+        console.log("arr1:", arr1);
+        console.log("original arr", arr);
+
+        // copying an array
+        let copy_arr = arr.map(element => { return element } )
+        console.log("copied arr", copy_arr);
+        console.log("original arr", arr);
+
+        //filter
+        // filter() used to create a new array with all elements that pass the test implemented by the provided function
+        // doesn't change original array and returns a new array containing only the elements for which the provided function returns true
+        let arr2 = arr.filter(element => element > 4)
+        console.log(arr2)
+
+        //reduce
+        // reduce() used to reduce an array to a single value
+        // executes a reducer function on each element of the array, resulting in a single output value
+        let sum = arr.reduce((a, b) => a+b)
+        console.log(sum);
+        
     </script>
 </body>
 </html>
