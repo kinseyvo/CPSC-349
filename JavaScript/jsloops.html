@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loops in JS</title>
+</head>
+<body>
+    <h1>Loops in JS</h1>
+    <script>
+        let arr = [3, 5, 7, 2, 1]
+        console.log(arr)
+        let i;
+        for (i = 0; i < arr.length; i++) {
+            arr[i] += 1;
+        }
+        console.log("length:", arr.length)
+        console.log(arr)
+
+
+        // let arr1 = [];
+        // arr.forEach((element) => {
+        //     element += 1;
+        //     arr1.push(element);
+        //     console.log(element)
+        // });
+        // console.log(arr1)
+
+
+        console.log("Incrementing arr without making a new array")
+        arr.forEach((element, index) => {
+            arr[index] = element + 1;
+        });
+        console.log(arr);
+
+
+        // of = elements
+        for(element of arr) {
+            console.log(element);
+        }
+
+        // in = index
+        for(element in arr) {
+            console.log(element)
+        }
+
+        console.log("while loop")
+        let a = 5;
+        while(a > 0) {
+            console.log(a);
+            a--;
+        }
+
+        console.log("do while")
+        let b = 10;
+        do {
+            console.log(b)
+            b--;
+        } while (b > 0)
+
+    </script>
+</body>
+</html>
