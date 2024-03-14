@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Static Methods in JS</title>
+</head>
+<body>
+    <h1>Static Methods in JS</h1>
+    <script>
+        class animal {
+            static count = 0;
+            constructor(givenname) {
+                this.name = animal.capitalize(givenname);
+                console.log("!@!@")
+                console.log(this.name)
+                console.log("!@!@")
+            }
+            walk() {
+                console.log(`Animal ${this.name} is walking`)
+            }
+            static capitalize(name) {
+                return name[0].toUpperCase() + name.substr(1, name.length)
+            }
+            add() {
+                ++animal.count;
+                console.log(animal.count)
+            }
+            sub() {
+                --animal.count;
+                console.log(animal.count)
+            }
+        }
+
+        let elephant = new animal("tuffy")
+        let dog = new animal("goofy");
+        elephant.walk()
+        elephant.add()
+        dog.add()
+        elephant.sub()
+
+    </script>
+</body>
+</html>
