@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inheritance in JS</title>
+</head>
+<body>
+    <h1>Inheritance in JS</h1>
+    <script>
+        class car {
+            constructor(name, color) {
+                this.name = name;
+                this.color = color;
+            }
+            info () {
+                console.log(`Name of the car is ${this.name} and it is ${this.color} in color`);
+            }
+            drive () {
+                console.log(`Driving ${this.name}`);
+            }
+            park () {
+                console.log(`Parking ${this.name}`);
+            }
+        }
+        class ferrari extends car {
+            // constructor(...args) {
+            //     super(...args)
+            // }
+            constructor(name, color, location) {
+                super(name, color)
+                this.name = name;
+                this.location = location;
+            }
+            run() {
+                console.log("runnnn")
+            }
+            info () {
+                super.info()
+                console.log(`Name of the ferrari is ${this.name} and it is ${this.color} in color, location is ${this.location}`);
+            }
+        }
+
+        let newcar = new car("tacoma", "blue")
+        newcar.info()
+        newcar.drive()
+        newcar.park()
+
+        let spyder = new ferrari("spyder", "red", "fullerton")
+        spyder.info()
+        spyder.run()
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classes in JS</title>
+</head>
+<body>
+    <h1>Classes in JS</h1>
+    <script>
+        class reservationForm {
+            constructor(name) {
+                this.name = name;
+            }
+            submit() {
+                console.log(this.name + " has submitted the form")
+            }
+
+            cancel() {
+                console.log(this.name + " has cancelled the form")
+            }
+
+            // fill(name) {
+            //     this.name = name;
+            // }
+        }
+
+        let luffy = new reservationForm("luffy")
+        //luffy.fill("luffy")
+        luffy.submit()
+
+        let zoro = new reservationForm("zoro")
+        //zoro.fill("zoro")
+        zoro.submit()
+
+        zoro.cancel()
+    </script>
+</body>
+</html>
