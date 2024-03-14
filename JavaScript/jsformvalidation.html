@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+</head>
+<body>
+    this is some text
+    <div class="container">
+        <h1>Form Validation</h1>
+        <form action="https://www.google.com" name="myform" method="post" onsubmit="validateForm()">
+            <label for="inpName">Username</label>
+            <input type="text" id="inpName"><br/>
+
+            <label for="inpPass">Password</label>
+            <input type="password" id="inpPass"><br/>
+
+            <label for="inpAge">Age</label>
+            <input type="text" id="inpAge"><br/>
+
+            <button type="submit">Submit</button>
+
+        </form>
+    </div>
+    <script>
+        function validateForm() {
+            let form = document.forms["myform"];
+            if(form["inpName"].value == "") {
+                alert("Please provide username")
+                event.preventDefault()
+                return false;
+            }
+            if(form["inpPass"].value.length < 8) {
+                alert("Password length should be greater than 8")
+                event.preventDefault()
+                return false;
+            }
+            if(form["inpAge"].value == "" || isNaN(form["inpAge"].value)) {
+                alert("Please enter appropriate age")
+                event.preventDefault()
+                return false;
+            }
+            
+            return true;
+        }
+
+        // console.log returns the element
+        // console.dir returns a JSON object
+
+    </script>
+
+</body>
+</html>
