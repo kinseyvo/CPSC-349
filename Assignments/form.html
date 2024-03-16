@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 1 - Kinsey Vo</title>
+    <style>
+        body {
+            /* Making the form in the center of the page */
+            display: flex;
+            justify-content: center;    /* Main axis (horizontally) */
+            align-items: center;    /* Cross axis (vertically) */
+            height: 100vh;
+        }
+
+        .container {
+            width: 250px;
+            padding: 20px;
+            border: 1px solid black;
+            border-radius: 10px;
+        }
+
+        .form-group {
+            margin-bottom: 0;
+        }
+
+        .form-group input,
+        .form-group select {
+            width: 97%;
+            padding: 5px;
+            box-sizing: border-box;
+            vertical-align: middle;
+        }
+
+        .form-group label {
+            display: inline-block;
+            width: 100px;
+            vertical-align: middle;
+            margin-right: 10px;
+        }
+
+        .form-group select {
+            width: 100px;
+        }
+
+        button {
+            width: 30%;
+            padding: 10px;
+            box-sizing: border-box;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        fieldset {
+            /* needed to have section name within box border */
+            border: 1px solid black;
+            margin-bottom: 10px;
+        }
+
+        .custom-textarea {
+            /* custom class to change text box color */
+            color: black;
+            border-color: black;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!-- using GET to see results in url (not recommended) -->
+        <form action="https://www.google.com" name="myform" method="get" onsubmit="">
+            <fieldset>
+                <legend>Login</legend>
+                <div class="form-group">
+                    <label>Username</label>
+                    <!-- required gives a pop-up if field is empty when trying to submit -->
+                    <input type="text" name="username" placeholder="Enter Username" required>
+                </div>
+                <div class="form-group">
+                    <label>Password</label>
+                    <input type="password" name="password" placeholder="Enter Password" required>
+                </div>
+            </fieldset>
+
+            <div>
+                <fieldset>
+                    <legend>Gender</legend>
+                    <input type="radio" name="gender" value="male" /><label>Male</label><br />
+                    <input type="radio" name="gender" value="female" /><label>Female</label><br />
+                    <input type="radio" name="gender" value="other" /><label>Others</label><br />
+                </fieldset>
+            </div>
+
+            <div>
+                <fieldset>
+                    <legend>Programming</legend>
+                    <input type="checkbox" /><label>Java</label><br/>
+                    <input type="checkbox" /><label>C#</label><br/>
+                    <input type="checkbox" /><label>C++</label><br/>
+                </fieldset>
+            </div>
+
+            <div class="form-group">
+                <fieldset>
+                    <legend>Favorite Fruit</legend>
+                    <label for="fruit">Choose a fruit:</label>
+                    <!-- select tag used to create a drop-down list -->
+                    <select name="fruit" id="fruit">
+                        <option value="">Fruit</option>
+                        <option value="apple">Apple</option>
+                        <option value="Banana">Banana</option>
+                        <option value="Orange">Orange</option>
+                        <option value="Strawberry">Strawberry</option>
+                        <option value="Grape">Grape</option>
+                    </select>
+                </fieldset>
+            </div>
+
+            <div class="form-group">
+                <textarea class="custom-textarea" placeholder="Enter some text" name="sometext" id="" cols="31" rows="10"></textarea>
+            </div>
+    
+            <button type="submit">Send</button>
+            <button type="reset">Reset</button>
+        </form>
+    </div>
+
+</body>
+
+</html>
