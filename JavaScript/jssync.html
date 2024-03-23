@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Synchronous programming</title>
+</head>
+<body>
+    <div class="container">
+        <h1>This is a heading</h1>
+        <h2>setTimeout, clearTimeout, setInterval, clearInterval</h2>
+        <!-- <input type="text" name="" id=""> -->
+        <p id="time"></p>
+    </div>
+    <script>
+        // setTimeout - allows us to run the function once after the interval of time
+        // clearTimeout - allows us to run the function repeatedly after the interval of time
+        
+        setTimeout(() => {
+            console.log("irjteoijergwenawoooooooga")
+        }, 5000);
+        // let input = document.getElementsByTagName("input")[0]
+        // console.log(input.innerHTML)
+
+        let greet = (name, byetext) => {
+            console.log(`hello ${name}, ${byetext}`)
+        }
+        let timeout = setTimeout(greet, 5000, "gwen", "have a nice day :))");
+        // console.log(timeout)
+
+        // clearTimeout(timeout);
+
+        let interval = setInterval(greet, 2000);
+        console.log("console log: ", interval);
+        clearInterval(interval);
+
+        function displayTime() {
+            let time = new Date()
+            let timep = document.getElementById("time")
+            timep.innerHTML = time;
+        }
+        setInterval(displayTime, 1000)
+
+    </script>
+</body>
+</html>
