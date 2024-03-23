@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Storage</title>
+</head>
+<body>
+    <h1>Local Storage</h1>
+    <script>
+        // cookies
+        // console.log(document.cookie)
+        // document.cookie = "name=barry1122334400"
+        // document.cookie = "name2=barry11223344002"
+        // document.cookie = "name=harry"
+
+        let key = prompt("Enter key")
+        let value = prompt("enter value")
+
+        // document.cookie = `${encodeURIComponent(key)}=${encodeURIComponent(value)}`
+        // console.log(document.cookie)
+
+        // localStorage and session storage
+        // let key = prompt("Enter key you want to set")
+        // let value = prompt("Enter value you want to set")
+
+        localStorage.setItem(key, value)
+
+        console.log(localStorage.getItem(key))
+
+        console.log(`The value at ${key} is ${localStorage.getItem(key)}`)
+
+        if (key == "red" || key == "blue") {
+            localStorage.removeItem(key)
+        }
+
+        if (key == 0) {
+            localStorage.clear()
+        }
+
+        // storage event
+        window.onstorage = (e) => {
+            alert("changed")
+            console.log(e)
+        }
+    </script>
+</body>
+</html>
