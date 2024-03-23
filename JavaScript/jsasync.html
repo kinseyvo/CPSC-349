@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async Await</title>
+</head>
+<body>
+    <h1>Async Await</h1>
+    <script>
+        async function getweather() {
+            let laweather = new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    resolve("80 deg")
+                }, 2000);
+            })
+            let sdweather = new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    resolve("90 deg")
+                }, 5000);
+            })
+
+            console.log("Fetching LA weather...")
+            let la = await laweather
+            console.log("LA weather is " + la)
+            console.log("Fetching SD weather")
+            let sd = await sdweather
+            console.log("SD weather is " + sd)
+            return [la, sd]
+        }
+
+        const climate = async () => {
+            console.log("climate is okay i guess")
+        }
+        
+        let someFunc = async () => {
+            console.log("this is new function")
+            let weather = await getweather()
+            let climate1 = await climate()
+        }
+
+        someFunc()
+        // let weather = getweather()
+        // weather.then(value => {
+        //     console.log(value)
+        // })
+
+    </script>
+</body>
+</html>
