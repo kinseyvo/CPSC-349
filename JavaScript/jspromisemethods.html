@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise Methods</title>
+</head>
+<body>
+    <h1>Promise Methods</h1>
+    <script>
+        let p1 = new Promise((resolve, reject) => {
+            setTimeout(() => {
+                resolve("Value 1")
+            }, 5000);
+        })
+
+        let p2 = new Promise((resolve, reject) => {
+            setTimeout(() => {
+                resolve("Value 2")
+            }, 2000);
+        })
+
+        let p3 = new Promise((resolve, reject) => {
+            setTimeout(() => {
+                resolve("Value 3")
+            }, 3000);
+        })
+
+        // p1.then(value => {
+        //     console.log(value)
+        // })
+        // p2.then(value => {
+        //     console.log(value)
+        // })
+        // p3.then(value => {
+        //     console.log(value)
+        // })
+
+        // returns a promise when "all" the promises are resolved and rejects when "any" of the promises rejects
+        // let promise_all = Promise.all([p1, p2, p3])
+        // promise_all.then(value => {
+        //     console.log(value)
+        // })
+
+        let p4 = new Promise((resolve, reject) => {
+            setTimeout(() => {
+                reject("Error value 4")
+            }, 3000);
+        })
+
+        // so if even 1 promise rejected, .all() will fail so use .allSelected() in these cases
+        // let promise_allSettled = Promise.allSettled([p1, p3, p4])
+        // promise_allSettled.then(value => {
+        //     console.log(value)
+        // })
+
+        // .race() returns the 1st promise that finished its execution and rejects when any of the promises reject
+        // let promise_race = Promise.race([p1, p3, p4])
+        // promise_race.then(value => {
+        //     console.log(value)
+        // })
+
+        // .any() returns the 1st promise that resolved and rejects when all of the promises reject
+        // let promise_any = Promise.any([p1, p3, p4])
+        // promise_any.then(value => {
+        //     console.log(value)
+        // })
+
+        // .resolve() return as resolved promise with the value passed
+        let promise_resolve = Promise.resolve("resolved")
+        promise_resolve.then(value => {
+            console.log(value)
+        })
+
+        // .reject() return as rejected promise with the passed error object
+        let promise_reject = Promise.reject("rejected :(")
+        promise_reject.then(value => {
+            console.log(value)
+        })
+
+    </script>
+</body>
+</html>
