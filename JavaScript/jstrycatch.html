@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Try Catch and Exception Handling in JS</title>
+</head>
+<body>
+    <h1>Try Catch</h1>
+    <script>
+        setTimeout(() => {
+            console.log("performing some activity...")
+        }, 1000);
+        setTimeout(() => {
+            console.log("watching movie...")
+        }, 2000);
+        
+        try {
+            // console.log(mickey)
+            throw new Error("this is an error")
+            throw new ReferenceError("this is an error")
+        } catch (error) {
+            console.log("error: ", error)
+            console.log("error name: ", error.name)
+            console.log("error message: ",error.message)
+            console.log("error stack: ",error.stack)
+            console.log("p: ", p)
+        }
+        finally {
+            console.log("this block will always execute")
+        }
+        
+        setTimeout(() => {
+            console.log("demon slayer is awesome...")
+        }, 3000);
+        setTimeout(() => {
+            console.log("attack on titan is better...")
+        }, 4000);
+    </script>
+</body>
+</html>
